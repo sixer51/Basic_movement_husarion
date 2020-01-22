@@ -1,0 +1,8 @@
+<launch>
+    <include file="$(find astra_launch)/launch/astra.launch"/>
+    <include file="$(find rplidar_ros)/launch/rplidar.launch"/>
+    <node pkg="husarion_ros" type="serial_bridge.sh" name="odometry_serial_bridge"/>
+
+    <node pkg="cs169_yijia_pa1" name="move" type="task1.py" />
+
+</launch>
